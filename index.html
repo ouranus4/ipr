@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1014">
+<meta name="description" content="Личный трекер индивидуального плана развития: стадии, нормы недели, деньги, движ.">
+<meta name="robots" content="noindex, nofollow">
+<title>ИПР · трекер</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='25' x='3' font-size='24'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header><div class="wrap" id="head"></div></header>
+
+<main class="wrap">
+  <section class="view on" id="v-today"></section>
+  <section class="view" id="v-dvizh"></section>
+  <section class="view" id="v-money"></section>
+  <section class="view" id="v-map"></section>
+  <section class="view" id="v-more"></section>
+  <p class="muted ctr" style="margin:26px 0 6px">Данные хранятся только в этом браузере.<br>Переносить между устройствами — через «Ещё → Выгрузить».</p>
+</main>
+
+<nav><div class="nv">
+  <button data-v="today" class="on"><span class="ic">◉</span><span class="nm">Сегодня</span></button>
+  <button data-v="dvizh"><span class="ic">✨</span><span class="nm">Движ</span></button>
+  <button data-v="money"><span class="ic">💶</span><span class="nm">Деньги</span></button>
+  <button data-v="map"><span class="ic">🧭</span><span class="nm">Карта</span></button>
+  <button data-v="more"><span class="ic">⋯</span><span class="nm">Ещё</span></button>
+</div></nav>
+
+<div class="toast" id="toast"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
