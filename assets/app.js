@@ -277,12 +277,22 @@
       h += '<details class="stg ' + (st.active ? 'act' : '') + (st.locked ? ' lck' : '') + '"' + (st.active ? ' open' : '') + '>' +
         '<summary><span class="sname">' + esc(st.name) + '</span><span class="pct">' + dn + '/' + tt + '</span></summary>' +
         '<div class="sbar"><i style="width:' + p + '%"></i></div><div class="body"><p class="hint">' + esc(st.hint) + '</p>';
+      if (st.act && st.act.length) {
+        h += '<div class="sect" style="margin:2px 0 2px">Что делать</div>';
+        for (var a = 0; a < st.act.length; a++) {
+          h += '<div class="li"><span class="ic">→</span><span class="tx">' + esc(st.act[a]) + '</span></div>';
+        }
+      }
+      if (st.gain) h += '<p class="muted" style="margin:10px 0 0"><b style="color:var(--ok)">Что откроется:</b> ' + esc(st.gain) + '</p>';
+      h += '<div class="sect" style="margin:16px 0 0">Проверка: что уже правда</div>';
       for (var j = 0; j < st.items.length; j++) {
         var on = !!(S.stages[st.id] || [])[j];
         h += '<label class="chk ' + (on ? 'done' : '') + '"><input type="checkbox" data-st="' + st.id + '" data-ix="' + j + '"' + (on ? ' checked' : '') + '><span>' + esc(st.items[j]) + '</span></label>';
       }
       h += '</div></details>';
     }
+    h += '<div class="card"><h2>Полные рекомендации</h2><p class="sub">Минус-состояния и чем их компенсировать, психотехники, родительские предписания, истинные ценности. Это личное, поэтому лежит в приватном репозитории</p>' +
+      '<a class="btn wide" href="https://github.com/ouranus4/ipr-plan/blob/main/%D0%A1%D0%A2%D0%90%D0%94%D0%98%D0%98.md" target="_blank" rel="noopener noreferrer">📓 Рекомендации по стадиям</a></div>';
     h += '<div class="card"><h2>Четыре рычага</h2><p class="sub">Рывок — это не «работать больше». Это четыре решения, повторённые двенадцать месяцев.</p>' +
       '<div class="li"><span class="ic">📈</span><span class="tx">Цена<small>Пол не опускается никогда</small></span></div>' +
       '<div class="li"><span class="ic">🔁</span><span class="tx">Повторяющийся доход<small>Пол, который не зависит от продаж месяца</small></span></div>' +
