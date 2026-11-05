@@ -167,3 +167,6 @@ nav{position:fixed; bottom:0; left:0; right:0; z-index:30; background:var(--bg2)
 .muted{color:var(--fg3); font-size:12.5px}
 .ctr{text-align:center}
 @media (min-width:560px){ .taps{grid-template-columns:repeat(4,1fr)} }
+
+a.btn{text-decoration:none; color:var(--fg)}
+a.btn.pri{color:#15110e}

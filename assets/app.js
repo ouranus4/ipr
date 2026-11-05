@@ -293,7 +293,13 @@
 
   function renderMore() {
     var c = cfg(), got = S.ach;
-    var h = '<div class="sect">Щиты</div><div class="card"><p class="sub">Стрики наоборот: считают дни, когда риск не случился. Если сорвалась — жми, и счётчик начнётся заново. Это не наказание, это данные.</p>';
+    var h = '<div class="card"><h2>Планы</h2><p class="sub">Приватный репозиторий: откроется только под твоим аккаунтом GitHub, для всех остальных это 404</p>' +
+      '<a class="btn wide pri" href="https://github.com/ouranus4/ipr-plan" target="_blank" rel="noopener noreferrer">📓 Открыть планы</a>' +
+      '<div class="row" style="margin-top:8px">' +
+      '<a class="btn sm" style="flex:1" href="https://github.com/ouranus4/ipr-plan/blob/main/%D0%9D%D0%9E%D0%AF%D0%91%D0%A0%D0%AC.md" target="_blank" rel="noopener noreferrer">Ноябрь</a>' +
+      '<a class="btn sm" style="flex:1" href="https://github.com/ouranus4/ipr-plan/blob/main/%D0%93%D0%9E%D0%94.md" target="_blank" rel="noopener noreferrer">Год</a>' +
+      '</div></div>';
+    h += '<div class="sect">Щиты</div><div class="card"><p class="sub">Стрики наоборот: считают дни, когда риск не случился. Если сорвалась — жми, и счётчик начнётся заново. Это не наказание, это данные.</p>';
     for (var i = 0; i < D.SHIELDS.length; i++) {
       var sh = D.SHIELDS[i], dd = shieldDays(sh.id);
       h += '<div class="sh"><span class="days ' + (dd ? '' : 'zero') + '">' + dd + '</span>' +
